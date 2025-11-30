@@ -1,1 +1,133 @@
-<h1>a</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav" id="navbar">
+        <a href="/Pages/HomePage/index.html">
+            <img src="images/HomePage/Header/image (1).png" alt="Netflix Logo" class="nav__logo">
+        </a>
+        <ul>
+            <li><a class="head-link" href="/Pages/HomePage/index.html"> Home</a></li>
+            <li><a class="head-link" href="/Pages/SeriesPage/series.html"> Series</a></li>
+            <li><a class="head-link" href="/Pages/MoviesPage/index.html"> Movies</a></li>
+            <li><a class="head-link" href=""> Trending Now</a></li>
+            <li><a class="head-link" href=""> My List</a></li>
+            <li><a class="head-link" href=""> Browse by Language</a></li>
+        </ul>
+        <img class="lupa" src="../../images/HomePage/Navbar/lupa.svg" alt="Search">
+        <img class="bell" src="../../images/HomePage/Navbar/bell.svg" alt="Notifications">
+        <img class="nav__avatar" src="../../images/HomePage/Navbar/user.jpg" alt="Netflix Avatar">
+        <img class="seta" src="../../images/HomePage/Navbar/arrow.svg" alt="Arrow">
+    </div>
+
+    <div class="banner">
+        <div class="bg-overlay"></div>
+        <video id="background-video" autoplay loop muted poster="../../images/HomePage/Header/SAW.jpeg">
+            <source src="images/HomePage/Header/vid.mp4" type="video/mp4">
+        </video>
+        <div class="banner__contents">
+            <img src="images/HomePage/Header/image.png" class="banner__title">
+            <div class="banner__description">
+                Wednesday Addams yang cerdas, sarkastis, dan sedikit tak berperasaan menyelidiki misteri rumit sambil bertemu teman-teman—dan beberapa musuh—baru di Nevermore Academy.            </div>
+            <div class="banner__buttons">
+                <button class="banner__button play"><img class="icon" src="../../images/HomePage/Header/play.svg">Play</button>
+               <a href="film/wednesday.html" class="banner__button info">
+                <img class="icon" src="../../images/HomePage/Header/info.svg" alt="More Info Icon">
+                More Info
+</a>            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>Top 10 films by me</h2>
+        <div class="row_posters">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg" alt="Breaking Bad" class="row__poster">
+            <img src="https://m.media-amazon.com/images/M/MV5BM2ZmMjEyZmYtOGM4YS00YTNhLWE3ZDMtNzQxM2RhNjBlODIyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg" alt="Wednesday" class="row__poster">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjA2MTEzMzkzM15BMl5BanBnXkFtZTgwMjM2MTM5MDI@._V1_.jpg" alt="The Autopsy of Jane Doe" class="row__poster">
+            <img src="https://m.media-amazon.com/images/M/MV5BYzU2MWQ5NGQtYmNlMC00ZjJkLWJmODItZDM5MDM3YmUyMWJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Monster" class="row__poster">
+            <img src="https://play-lh.googleusercontent.com/proxy/Z7zN0cXkNKG9lpSVPI63QiY_U0M7RpuurB0xvpsIPnw5KImziTRf9sb4UUJr9zRsFcJFNkyXW4R5a7qdBOuU4ocdSVm2zrZNDRfilLPlIDECCUiZETAWZaQ28s65nXiTbjjEEUhjn_SMOi9KqQ1DnIi-FmL8V3UW-inwig" alt="Crows Zero" class="row__poster">
+            <img src="https://upload.wikimedia.org/wikipedia/id/4/4e/El_camino_bb_film_poster.jpg" alt="El Camino" class="row__poster">
+            <img src="https://screenscore.digitalmama.id/wp-content/uploads/2025/03/MV5BNGYzMjBhMTMtM2Q4YS00OGMyLTk2ZWItYTg3MDk2YWIxNmVkXkEyXkFqcGc@._V1_.jpg" alt="Tokyo Revenger" class="row__poster">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Better_Call_Saul_season_1.jpg" alt="Better Call Saul" class="row__poster">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Fullmetal Alchemist" class="row__poster">
+            <img src="https://m.media-amazon.com/images/M/MV5BMWUwNDFiNjQtYjQ0MC00MTcxLWE0MGQtNTdkYTlhZGU2NDFmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Violet Evergarden" class="row__poster">
+        </div>
+        </div>
+
+    <div class="row">
+        <h2>Recently Released Movies</h2>
+        <div class="row_posters">
+            <img src="../../images/HomePage/Body/Movies/small-movie1.jpg" alt="Poster of the movie Pacific Rim: Uprising" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie2.jpg" alt="Poster of the movie Prisoners" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie3.jpg" alt="Poster of the movie Now You See Me" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie4.jpg" alt="Poster of the movie The Hunger Games: Catching Fire" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie5.jpg" alt="Poster of the movie The Amazing Spider-Man" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie6.jpg" alt="Poster of the movie Power Rangers" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie7.jpg" alt="Poster of the movie Django Unchained" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie8.jpg" alt="Poster of the movie Twilight" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie1.jpg" alt="Poster of the movie Pacific Rim: Uprising" class="row__poster">
+            <img src="../../images/HomePage/Body/Movies/small-movie2.jpg" alt="Poster of the movie Prisoners" class="row__poster">
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>Recently Released Series</h2>
+        <div class="row_posters">
+            <img src="../../images/HomePage/Body/Series/small-movie1.svg" alt="Poster of the series Regular Show" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie2.svg" alt="Poster of the series Better Call Saul" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie3.svg" alt="Poster of the series Breaking Bad" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie4.svg" alt="Poster of the series The Flash" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie5.svg" alt="Poster of the series Gossip Girl" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie6.svg" alt="Poster of the series Money Heist" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie7.svg" alt="Poster of the series Lucifer" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie8.svg" alt="Poster of the series Avatar: The Last Airbender" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie1.svg" alt="Poster of the series Regular Show" class="row__poster">
+            <img src="../../images/HomePage/Body/Series/small-movie2.svg" alt="Poster of the series Better Call Saul" class="row__poster">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__icons">
+            <div class="svg_container"><img class="svg" src="../../images/HomePage/Footer/facebook.svg" alt="Facebook"></div>
+            <div class="svg_container"><img class="svg" src="../../images/HomePage/Footer/instagram.svg" alt="Instagram"></div>
+            <div class="svg_container"><img class="svg" src="../../images/HomePage/Footer/twitter.svg" alt="Twitter"></div>
+            <div class="svg_container"><img class="svg" src="../../images/HomePage/Footer/youtube.svg" alt="Youtube"></div>
+        </div>
+        <div class="footer__container">
+            <div class="footer__row">
+                <ul class="column">
+                    <li><a href="/">Audio Description</a></li>
+                    <li><a href="/">Help Center</a></li>
+                    <li><a href="/">Gift Cards</a></li>
+                    <button class="footer__serviceCode">Service Code</button>
+                </ul>
+                <ul class="column">
+                    <li><a href="/">Media Center</a></li>
+                    <li><a href="/">Investor Relations</a></li>
+                    <li><a href="/">Careers</a></li>
+                </ul>
+                <ul class="column">
+                    <li><a href="/">Terms of Use</a></li>
+                    <li><a href="/">Privacy</a></li>
+                    <li><a href="/">Legal Notices</a></li>
+                </ul>
+                <ul class="column">
+                    <li><a href="/">Cookie Preferences</a></li>
+                    <li><a href="/">Corporate Information</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <span class="footer__trademark">© 1997-2024 Netflix, Inc.</span>
+    </footer>
+
+</body>
+
+</html>
