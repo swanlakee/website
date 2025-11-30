@@ -37,11 +37,16 @@
             <div class="banner__description">
                 Wednesday Addams yang cerdas, sarkastis, dan sedikit tak berperasaan menyelidiki misteri rumit sambil bertemu teman-teman—dan beberapa musuh—baru di Nevermore Academy.            </div>
             <div class="banner__buttons">
-                <button class="banner__button play"><img class="icon" src="../../images/HomePage/Header/play.svg">Play</button>
+                <audio id="myAudio" src="sound/sound.mp3"></audio>
+
+                <button class="banner__button play" id="playButton">
+                    <img class="icon" src="../../images/HomePage/Header/play.svg">Play
+                </button>
                <a href="film/wednesday.html" class="banner__button info">
                 <img class="icon" src="../../images/HomePage/Header/info.svg" alt="More Info Icon">
                 More Info
-</a>            </div>
+                </a>            
+                </div>
         </div>
     </div>
 
@@ -131,3 +136,32 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // 1. Dapatkan elemen audio dan tombol
+    const audio = document.getElementById('myAudio');
+    const playButton = document.getElementById('playButton');
+
+    // 2. Tambahkan event listener untuk klik tombol
+    playButton.addEventListener('click', function() {
+        // Cek apakah audio sedang berhenti/dijeda
+        if (audio.paused) {
+            // Jika dijeda, putar audio
+            audio.play();
+            // Opsional: Ubah teks tombol menjadi "Pause"
+            playButton.innerHTML = '<img class="icon" src="../../images/HomePage/Header/pause.svg">Pause';
+        } else {
+            // Jika sedang diputar, jeda audio
+            audio.pause();
+            // Opsional: Ubah teks tombol menjadi "Play" lagi
+            playButton.innerHTML = '<img class="icon" src="../../images/HomePage/Header/play.svg">Play';
+        }
+    });
+
+    // Opsional: Reset tombol saat audio selesai diputar
+    audio.addEventListener('ended', function() {
+        playButton.innerHTML = '<img class="icon" src="../../images/HomePage/Header/play.svg">Play';
+    });
+});
+</script>
