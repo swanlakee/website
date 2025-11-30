@@ -18,7 +18,11 @@
             </div>
 
             <div class="icones-meio">
-                <a href="#" class="link"><img src="../../images/ModeloPages/icons/play.svg" alt="Watch" class="icone-play"> Play</a>
+                <audio id="playerAudio" src="../sound/sound.mp3"></audio>
+
+<a href="#" class="link" id="audioLink">
+    <img src="../../images/ModeloPages/icons/play.svg" alt="Watch" class="icone-play"> Play
+</a>
                 <img src="../../images/ModeloPages/icons/add.svg" alt="Add to My List" class="icone">
                 <img src="../../images/ModeloPages/icons/like.svg" alt="Like" class="icone">
             </div>
@@ -106,3 +110,44 @@
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // 1. Dapatkan elemen
+    const audio = document.getElementById('playerAudio');
+    const audioLink = document.getElementById('audioLink');
+
+    // 2. Tambahkan event listener untuk klik pada tautan
+    audioLink.addEventListener('click', function(event) {
+        // Mencegah tautan untuk pergi ke URL lain (misalnya ke atas halaman karena href="#")
+        event.preventDefault(); 
+        
+        // Dapatkan elemen gambar di dalam tautan untuk memperbarui ikon
+        const iconElement = audioLink.querySelector('.icone-play');
+        
+        if (audio.paused) {
+            // Jika dijeda, putar audio
+            audio.play();
+            // Perbarui ikon dan teks tautan
+            audioLink.childNodes[1].nodeValue = " Pause"; // Mengubah teks ' Play' menjadi ' Pause'
+            iconElement.src = "../../images/ModeloPages/icons/pause.svg"; // Ubah ikon ke Pause (asumsi Anda memiliki ikon pause.svg)
+            iconElement.alt = "Pause";
+        } else {
+            // Jika sedang diputar, jeda audio
+            audio.pause();
+            // Perbarui ikon dan teks tautan
+            audioLink.childNodes[1].nodeValue = " Play"; // Mengubah teks ' Pause' menjadi ' Play'
+            iconElement.src = "../../images/ModeloPages/icons/play.svg"; // Ubah ikon kembali ke Play
+            iconElement.alt = "Watch";
+        }
+    });
+
+    // 3. Opsional: Mengatur ulang ikon dan teks ketika audio selesai diputar
+    audio.addEventListener('ended', function() {
+        const iconElement = audioLink.querySelector('.icone-play');
+        audioLink.childNodes[1].nodeValue = " Play";
+        iconElement.src = "../../images/ModeloPages/icons/play.svg";
+        iconElement.alt = "Watch";
+    });
+});
+</script>
